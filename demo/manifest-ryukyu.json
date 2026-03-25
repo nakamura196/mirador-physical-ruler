@@ -6,16 +6,46 @@
     "ja": ["正保琉球国悪鬼納島絵図写"],
     "en": ["Shōhō Ryūkyūkoku Akunijima Ezu Utsushi"]
   },
+  "rights": "https://www.hi.u-tokyo.ac.jp/faq/reuse",
+  "logo": [
+    {
+      "id": "https://www.hi.u-tokyo.ac.jp/icon.png",
+      "type": "Image"
+    }
+  ],
+  "requiredStatement": {
+    "label": { "ja": ["帰属"], "en": ["Attribution"] },
+    "value": { "ja": ["東京大学史料編纂所"], "en": ["Historiographical Institute, The University of Tokyo"] }
+  },
   "metadata": [
+    {
+      "label": { "ja": ["タイトル"], "en": ["Title"] },
+      "value": {
+        "ja": ["正保琉球国悪鬼納島絵図写"],
+        "en": ["Copy of the Shōhō-era Pictorial Map of Akunijima, Ryukyu"]
+      }
+    },
     {
       "label": { "ja": ["請求記号"], "en": ["Call Number"] },
       "value": { "ja": ["Ｓ島津 76-2-5"] }
     },
     {
       "label": { "ja": ["法量"], "en": ["Dimensions"] },
-      "value": { "ja": ["353.7×621.6cm"] }
+      "value": { "ja": ["縦353.7cm × 横621.6cm"], "en": ["353.7 × 621.6 cm"] }
+    },
+    {
+      "label": { "ja": ["所蔵"], "en": ["Repository"] },
+      "value": { "ja": ["東京大学史料編纂所"], "en": ["Historiographical Institute, The University of Tokyo"] }
+    },
+    {
+      "label": { "ja": ["関連リンク"], "en": ["Related Link"] },
+      "value": {
+        "ja": ["<a href=\"https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu/\">琉球関係史料デジタルギャラリー</a>"],
+        "en": ["<a href=\"https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu/\">Ryukyu Digital Gallery</a>"]
+      }
     }
   ],
+  "viewingDirection": "right-to-left",
   "items": [
     {
       "id": "manifest-ryukyu.json/canvas/1",
@@ -29,6 +59,15 @@
           "profile": "http://iiif.io/api/annex/services/physdim",
           "physicalScale": 0.12483,
           "physicalUnits": "mm"
+        }
+      ],
+      "thumbnail": [
+        {
+          "id": "https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu/data/files/tile/0002/full/778,/0/default.jpg",
+          "type": "Image",
+          "format": "image/jpeg",
+          "width": 778,
+          "height": 444
         }
       ],
       "items": [
