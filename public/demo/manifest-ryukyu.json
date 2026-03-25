@@ -3,8 +3,9 @@
   "id": "manifest-ryukyu.json",
   "type": "Manifest",
   "label": {
-    "ja": ["正保琉球国悪鬼納島絵図写"],
-    "en": ["Shōhō Ryūkyūkoku Akunijima Ezu Utsushi"]
+    "ja": [
+      "正保琉球国悪鬼納島絵図写"
+    ]
   },
   "rights": "https://www.hi.u-tokyo.ac.jp/faq/reuse",
   "logo": [
@@ -14,34 +15,88 @@
     }
   ],
   "requiredStatement": {
-    "label": { "ja": ["帰属"], "en": ["Attribution"] },
-    "value": { "ja": ["東京大学史料編纂所"], "en": ["Historiographical Institute, The University of Tokyo"] }
+    "label": {
+      "ja": [
+        "帰属"
+      ]
+    },
+    "value": {
+      "ja": [
+        "東京大学史料編纂所"
+      ]
+    }
   },
   "metadata": [
     {
-      "label": { "ja": ["タイトル"], "en": ["Title"] },
+      "label": {
+        "ja": [
+          "タイトル"
+        ]
+      },
       "value": {
-        "ja": ["正保琉球国悪鬼納島絵図写"],
-        "en": ["Copy of the Shōhō-era Pictorial Map of Akunijima, Ryukyu"]
+        "ja": [
+          "正保琉球国悪鬼納島絵図写"
+        ]
       }
     },
     {
-      "label": { "ja": ["請求記号"], "en": ["Call Number"] },
-      "value": { "ja": ["Ｓ島津 76-2-5"] }
-    },
-    {
-      "label": { "ja": ["法量"], "en": ["Dimensions"] },
-      "value": { "ja": ["縦353.7cm × 横621.6cm"], "en": ["353.7 × 621.6 cm"] }
-    },
-    {
-      "label": { "ja": ["所蔵"], "en": ["Repository"] },
-      "value": { "ja": ["東京大学史料編纂所"], "en": ["Historiographical Institute, The University of Tokyo"] }
-    },
-    {
-      "label": { "ja": ["関連リンク"], "en": ["Related Link"] },
+      "label": {
+        "ja": [
+          "請求記号"
+        ]
+      },
       "value": {
-        "ja": ["<a href=\"https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu/\">琉球関係史料デジタルギャラリー</a>"],
-        "en": ["<a href=\"https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu/\">Ryukyu Digital Gallery</a>"]
+        "ja": [
+          "Ｓ島津 76-2-5"
+        ]
+      }
+    },
+    {
+      "label": {
+        "ja": [
+          "法量"
+        ]
+      },
+      "value": {
+        "ja": [
+          "縦353.7cm × 横621.6cm"
+        ]
+      }
+    },
+    {
+      "label": {
+        "ja": [
+          "所蔵"
+        ]
+      },
+      "value": {
+        "ja": [
+          "東京大学史料編纂所"
+        ]
+      }
+    },
+    {
+      "label": {
+        "ja": [
+          "利用条件"
+        ]
+      },
+      "value": {
+        "ja": [
+          "<a href=\"https://www.hi.u-tokyo.ac.jp/faq/reuse\">東京大学史料編纂所 画像利用について</a>"
+        ]
+      }
+    },
+    {
+      "label": {
+        "ja": [
+          "関連リンク"
+        ]
+      },
+      "value": {
+        "ja": [
+          "<a href=\"https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu/\">琉球関係史料デジタルギャラリー</a>"
+        ]
       }
     }
   ],
@@ -50,7 +105,11 @@
     {
       "id": "manifest-ryukyu.json/canvas/1",
       "type": "Canvas",
-      "label": { "ja": ["正保琉球国悪鬼納島絵図写"] },
+      "label": {
+        "ja": [
+          "正保琉球国悪鬼納島絵図写"
+        ]
+      },
       "width": 49797,
       "height": 28435,
       "service": [

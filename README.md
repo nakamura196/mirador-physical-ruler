@@ -1,18 +1,20 @@
 # mirador-physical-ruler
 
-Mirador 4 用の物理寸法ルーラープラグイン。
-IIIF マニフェストの canvas に `physdim` サービスが設定されていれば、
-ビューア上に mm / cm / inch 単位のスケールルーラーを SVG でオーバーレイ表示します。
+A Mirador 4 plugin that displays a physical dimensions ruler overlay using the IIIF Physical Dimensions (physdim) service.
 
-## インストール
+IIIF マニフェストの canvas に physdim サービスが設定されていれば、ビューア上にスケールルーラーを SVG でオーバーレイ表示する Mirador 4 プラグインです。
+
+**Demo / デモ**: [https://nakamura196.github.io/mirador-physical-ruler/](https://nakamura196.github.io/mirador-physical-ruler/)
+
+## Installation / インストール
 
 ```bash
 npm install mirador-physical-ruler
 ```
 
-## 使い方
+## Usage / 使い方
 
-### 基本（デフォルト設定）
+### Basic / 基本
 
 ```js
 import Mirador from 'mirador';
@@ -24,46 +26,48 @@ Mirador.viewer(
 );
 ```
 
-### カスタム設定
+### Custom options / カスタム設定
 
 ```js
-import Mirador from 'mirador';
 import { createPlugin } from 'mirador-physical-ruler';
 
 const rulerPlugin = createPlugin({
-  color: '#ffffff',   // ルーラーの色
-  thickness: 34,      // ルーラーの幅・高さ (px)
+  color: '#ffffff',
+  thickness: 34,
 });
-
-Mirador.viewer(
-  { id: 'mirador', windows: [{ manifestId: 'https://example.com/manifest.json' }] },
-  rulerPlugin
-);
 ```
 
-### オプション一覧
+### Options / オプション一覧
 
-| オプション | デフォルト | 説明 |
+| Option | Default | Description |
 |---|---|---|
-| `color` | `'#ffffff'` | ルーラーの色 |
-| `thickness` | `34` | ルーラーの幅 (px) |
-| `fallbackScale` | `null` | physdim service がない場合のフォールバック (mm/px) |
-| `fallbackUnits` | `'mm'` | フォールバック時の単位 |
+| `color` | `'#ffffff'` | Ruler color / ルーラーの色 |
+| `thickness` | `34` | Ruler bar width in px / ルーラーの幅 (px) |
+| `fallbackScale` | `null` | Fallback scale (mm/px) when physdim service is absent / physdim がない場合のフォールバック |
+| `fallbackUnits` | `'mm'` | Fallback units / フォールバック時の単位 |
 
-ルーラー左上の歯車ボタンから、フォントサイズ・目盛りサイズ・色・透明度・表示単位（mm/cm/in）をランタイムで変更できます。
+The gear button on the top-left corner opens a settings panel where you can change font size, tick size, color, opacity, and display units (mm/cm/in) at runtime.
 
----
+左上の歯車ボタンから、フォントサイズ・目盛りサイズ・色・透明度・表示単位（mm/cm/in）をランタイムで変更できます。
 
-## IIIF マニフェストへの physdim サービスの追加
+## Demo with custom manifest / 任意のマニフェストでデモ
 
-canvas の `service` プロパティに以下を埋め込みます。
+You can load any IIIF manifest by appending the `manifest` query parameter:
+
+`?manifest=` パラメータで任意のマニフェストを読み込めます:
+
+```
+https://nakamura196.github.io/mirador-physical-ruler/?manifest=https://example.com/manifest.json
+```
+
+## Adding physdim service to your manifest / physdim サービスの追加方法
+
+Add the following to the `service` property of your canvas:
+
+canvas の `service` プロパティに以下を追加します:
 
 ```json
 {
-  "id": "https://example.com/canvas/1",
-  "type": "Canvas",
-  "width": 4096,
-  "height": 6000,
   "service": [
     {
       "@context": "http://iiif.io/api/annex/services/physdim/1/context.json",
@@ -75,41 +79,36 @@ canvas の `service` プロパティに以下を埋め込みます。
 }
 ```
 
-### physicalScale の計算方法
+### Calculating physicalScale / physicalScale の計算方法
 
 ```
-physicalScale = 実物の幅(mm) / canvas.width(px)
+physicalScale = physical width (mm) / canvas width (px)
 ```
 
-例: 実物 347mm 幅、canvas.width = 4096px の場合 → `347 / 4096 ≈ 0.0847`
+If scan resolution (dpi) is known / スキャン解像度がわかっている場合:
 
-スキャン解像度（dpi）が既知の場合: `physicalScale = 25.4 / dpi`
+```
+physicalScale = 25.4 / dpi
+```
 
-`physicalUnits` は `"mm"` または `"in"` を指定します。
+`physicalUnits`: `"mm"` or `"in"`
 
----
+## How it works / 動作の仕組み
 
-## 動作の仕組み
+1. The plugin wraps `OpenSeadragonViewer` and obtains the OSD instance via `OSDReferences`
+2. Listens to `zoom` / `pan` / `animation` events to update viewport information
+3. Calculates screen pixels per physical unit from `getBoundsNoRotate()` and `canvasWidth * physicalScale`
+4. Renders the ruler as SVG with automatically adjusted tick intervals
 
-1. プラグインが `OpenSeadragonViewer` を wrap し、`OSDReferences` から OSD インスタンスを取得
-2. `zoom` / `pan` / `animation` イベントを監視してビューポート情報を更新
-3. OSD viewport の `getBoundsNoRotate()` と `canvasWidth * physicalScale` から
-   「スクリーン 1px = 何 mm」を計算
-4. SVG でルーラーを描画（ズームに応じて目盛り間隔を自動調整）
+## Notes / 注意事項
 
----
-
-## 注意事項
-
-- **Mirador 4.x 専用** です
-- physdim サービスが設定されていない canvas ではルーラーは表示されません（`fallbackScale` を設定すれば表示可能）
-
----
+- **Mirador 4.x only** (for Mirador 3, use [mirador-ruler-plugin](https://github.com/ubleipzig/mirador-ruler-plugin))
+- The ruler is not displayed on canvases without a physdim service (unless `fallbackScale` is set)
 
 ## Acknowledgements
 
 Inspired by [mirador-ruler-plugin](https://github.com/ubleipzig/mirador-ruler-plugin) (Mirador 3) and [dbmdz/mirador-plugins](https://github.com/dbmdz/mirador-plugins) physicalRuler (Mirador 2).
 
-## ライセンス
+## License
 
 MIT

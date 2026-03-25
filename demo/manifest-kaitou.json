@@ -5,9 +5,6 @@
   "label": {
     "ja": [
       "海東諸国紀"
-    ],
-    "en": [
-      "Kaitō Shokokuki"
     ]
   },
   "rights": "https://www.hi.u-tokyo.ac.jp/faq/reuse",
@@ -21,17 +18,11 @@
     "label": {
       "ja": [
         "帰属"
-      ],
-      "en": [
-        "Attribution"
       ]
     },
     "value": {
       "ja": [
         "東京大学史料編纂所"
-      ],
-      "en": [
-        "Historiographical Institute, The University of Tokyo"
       ]
     }
   },
@@ -40,17 +31,11 @@
       "label": {
         "ja": [
           "タイトル"
-        ],
-        "en": [
-          "Title"
         ]
       },
       "value": {
         "ja": [
           "海東諸国紀"
-        ],
-        "en": [
-          "Kaitō Shokokuki"
         ]
       }
     },
@@ -58,17 +43,11 @@
       "label": {
         "ja": [
           "著者"
-        ],
-        "en": [
-          "Author"
         ]
       },
       "value": {
         "ja": [
           "申叔舟（シンスクチュ、1417〜75）"
-        ],
-        "en": [
-          "Sin Sukju (1417–75)"
         ]
       }
     },
@@ -76,17 +55,11 @@
       "label": {
         "ja": [
           "成立年"
-        ],
-        "en": [
-          "Date"
         ]
       },
       "value": {
         "ja": [
           "朝鮮成宗2年（文明3年、1471）"
-        ],
-        "en": [
-          "1471 (2nd year of King Seongjong)"
         ]
       }
     },
@@ -94,17 +67,11 @@
       "label": {
         "ja": [
           "形態"
-        ],
-        "en": [
-          "Format"
         ]
       },
       "value": {
         "ja": [
           "朝鮮活字版 冊子"
-        ],
-        "en": [
-          "Korean movable type print, codex"
         ]
       }
     },
@@ -112,17 +79,11 @@
       "label": {
         "ja": [
           "法量"
-        ],
-        "en": [
-          "Dimensions"
         ]
       },
       "value": {
         "ja": [
           "縦32.6cm × 横21.2cm"
-        ],
-        "en": [
-          "32.6 × 21.2 cm"
         ]
       }
     },
@@ -130,17 +91,11 @@
       "label": {
         "ja": [
           "所蔵"
-        ],
-        "en": [
-          "Repository"
         ]
       },
       "value": {
         "ja": [
           "東京大学史料編纂所"
-        ],
-        "en": [
-          "Historiographical Institute, The University of Tokyo"
         ]
       }
     },
@@ -148,17 +103,11 @@
       "label": {
         "ja": [
           "利用条件"
-        ],
-        "en": [
-          "Terms of Use"
         ]
       },
       "value": {
         "ja": [
           "<a href=\"https://www.hi.u-tokyo.ac.jp/faq/reuse\">東京大学史料編纂所 画像利用について</a>"
-        ],
-        "en": [
-          "<a href=\"https://www.hi.u-tokyo.ac.jp/faq/reuse\">Terms of Use (HI, UTokyo)</a>"
         ]
       }
     },
@@ -166,17 +115,11 @@
       "label": {
         "ja": [
           "備考"
-        ],
-        "en": [
-          "Note"
         ]
       },
       "value": {
         "ja": [
           "朝鮮成宗の王命を受けて申叔舟が編纂した海東諸国（日本国・琉球国）についての研究書。表紙裏にある内賜記に「正徳7年（1512）」の年紀があることから善本とされる。"
-        ],
-        "en": [
-          "A study of the Eastern Sea countries (Japan and Ryukyu), compiled by Sin Sukju by royal order of King Seongjong. Considered a fine copy due to the inscription dated 1512 on the inside cover."
         ]
       }
     }
