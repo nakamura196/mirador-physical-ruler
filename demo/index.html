@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>mirador-physical-ruler デモ</title>
+  <style>
+    body { margin: 0; background: #222; }
+    #mirador { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="mirador"></div>
+
+  <!--
+    UMD ビルドを使ったスタンドアロンデモ
+    npm run build で dist/mirador-physical-ruler.umd.js を生成後に使用
+  -->
+  <script src="https://unpkg.com/mirador@^4/dist/mirador.min.js"></script>
+  <script src="../dist/mirador-physical-ruler.umd.js"></script>
+
+  <script>
+    // physdim サービス付きのテスト用マニフェスト（インライン）
+    // 実際は IIIF サーバーのマニフェスト URL を指定してください
+    const TEST_MANIFEST_URL = 'https://iiif.io/api/cookbook/recipe/0001-mvm-image/manifest.json';
+
+    const plugin = MiradorPhysicalRuler.createPlugin({
+      color: '#ffffff',
+      thickness: 22,
+    });
+
+    Mirador.viewer(
+      {
+        id: 'mirador',
+        windows: [
+          {
+            manifestId: TEST_MANIFEST_URL,
+            // physdim サービスを持つマニフェストに差し替えてください
+          },
+        ],
+      },
+      plugin
+    );
+  </script>
+</body>
+</html>

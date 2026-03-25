@@ -1,0 +1,68 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "http://localhost:5173/demo/manifest-kaitou.json",
+  "type": "Manifest",
+  "label": {
+    "ja": ["海東諸国紀"],
+    "en": ["Kaitō Shokokuki"]
+  },
+  "metadata": [
+    {
+      "label": { "ja": ["所蔵"], "en": ["Repository"] },
+      "value": { "ja": ["東京大学史料編纂所"] }
+    },
+    {
+      "label": { "ja": ["寸法"], "en": ["Dimensions"] },
+      "value": { "ja": ["縦32.6cm × 横21.2cm"] }
+    },
+    {
+      "label": { "ja": ["備考"], "en": ["Note"] },
+      "value": { "ja": ["朝鮮成宗2年（1471）申叔舟編纂。朝鮮活字版。正徳7年（1512）内賜記あり。"] }
+    }
+  ],
+  "items": [
+    {
+      "id": "http://localhost:5173/demo/manifest-kaitou.json/canvas/1",
+      "type": "Canvas",
+      "label": { "ja": ["海東諸国紀"] },
+      "width": 4474,
+      "height": 3918,
+      "service": [
+        {
+          "@context": "http://iiif.io/api/annex/services/physdim/1/context.json",
+          "profile": "http://iiif.io/api/annex/services/physdim",
+          "physicalScale": 0.04739,
+          "physicalUnits": "mm"
+        }
+      ],
+      "items": [
+        {
+          "id": "http://localhost:5173/demo/manifest-kaitou.json/canvas/1/page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://localhost:5173/demo/manifest-kaitou.json/canvas/1/page/annotation",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://cantaloupe.lab.hi.u-tokyo.ac.jp/iiif/2/clioimg%2F6ac7a5b6-1a7a-4371-92fa-5b43e689ac52.tif/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 4474,
+                "height": 3918,
+                "service": [
+                  {
+                    "id": "https://cantaloupe.lab.hi.u-tokyo.ac.jp/iiif/2/clioimg%2F6ac7a5b6-1a7a-4371-92fa-5b43e689ac52.tif",
+                    "type": "ImageService2",
+                    "profile": "level2"
+                  }
+                ]
+              },
+              "target": "http://localhost:5173/demo/manifest-kaitou.json/canvas/1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
