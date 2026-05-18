@@ -112,7 +112,7 @@
       },
       "value": {
         "ja": [
-          "本デモの physicalScale は、公開法量「縦28cm」と画像高さ3,082pxから算出した推定値です（280mm ÷ 3,082px ≒ 0.09085 mm/px）。"
+          "本デモの physicalScale は、公開法量「縦28cm」を本紙の高さとし、画像から本紙領域の高さ（上下のスキャン余白を除いた約2,802px）を実測して算出した推定値です（280mm ÷ 2,802px ≒ 0.09993 mm/px）。"
         ]
       }
     }
@@ -132,7 +132,7 @@
         {
           "@context": "http://iiif.io/api/annex/services/physdim/1/context.json",
           "profile": "http://iiif.io/api/annex/services/physdim",
-          "physicalScale": 0.09085,
+          "physicalScale": 0.09993,
           "physicalUnits": "mm"
         }
       ],
