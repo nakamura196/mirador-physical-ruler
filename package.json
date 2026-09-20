@@ -22,14 +22,14 @@
     "build:demo": "vite build --config vite.demo.config.js"
   },
   "peerDependencies": {
-    "mirador": "^4.0.0",
+    "mirador": "^4.2.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "mirador": "^4.0.0",
-    "playwright": "^1.58.2",
+    "mirador": "^4.2.4",
+    "playwright": "^1.63.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "vite": "^6.0.0"
