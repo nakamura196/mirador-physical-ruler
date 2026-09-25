@@ -1,14 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { demoBase } from './site.config.mjs';
 
-// GitHub Pages デモ用ビルド設定
+// GitHub Pages デモ用ビルド設定 (公開先は site.config.mjs の SITE_URL)
 export default defineConfig({
   plugins: [
     react({
       include: ['**/*.jsx', '**/*.js'],
     }),
   ],
-  base: '/mirador-physical-ruler/',
+  base: demoBase(),
   optimizeDeps: {
     esbuildOptions: {
       loader: { '.js': 'jsx' },

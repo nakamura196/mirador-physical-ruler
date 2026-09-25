@@ -4,7 +4,7 @@ A Mirador 4 plugin that displays a physical dimensions ruler overlay using the I
 
 IIIF マニフェストの canvas に physdim サービスが設定されていれば、ビューア上にスケールルーラーを SVG でオーバーレイ表示する Mirador 4 プラグインです。
 
-**Demo / デモ**: [https://nakamura196.github.io/mirador-physical-ruler/](https://nakamura196.github.io/mirador-physical-ruler/)
+**Demo / デモ**: [https://ruler.ldas.jp/](https://ruler.ldas.jp/)
 
 ## Installation / インストール
 
@@ -57,7 +57,7 @@ You can load any IIIF manifest by appending the `manifest` query parameter:
 `?manifest=` パラメータで任意のマニフェストを読み込めます:
 
 ```
-https://nakamura196.github.io/mirador-physical-ruler/?manifest=https://example.com/manifest.json
+https://ruler.ldas.jp/?manifest=https://example.com/manifest.json
 ```
 
 ## Adding physdim service to your manifest / physdim サービスの追加方法
