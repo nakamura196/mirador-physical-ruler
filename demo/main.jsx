@@ -8,14 +8,10 @@ const params = new URLSearchParams(window.location.search);
 const manifestParam = params.get('manifest');
 
 const HYAKKI = `${BASE}demo/manifest-hyakki.json`;
-const KAITOU = `${BASE}demo/manifest-kaitou.json`;
-const RYUKYU = `${BASE}demo/manifest-ryukyu.json`;
 
 // リソース一覧（Mirador の追加パネルから開ける）
 const catalog = [
   { manifestId: HYAKKI },
-  { manifestId: KAITOU },
-  { manifestId: RYUKYU },
 ];
 
 // デフォルトで開くウィンドウは百鬼夜行図
